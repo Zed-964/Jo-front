@@ -3,7 +3,7 @@ import { Offer } from "../TicketGallery/TicketGallery.tsx";
 import { GiTicket } from "react-icons/gi";
 import { IconContext } from "react-icons";
 import { GoChevronDown } from "react-icons/go";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import useBasketContent from "../../hooks/useBasketContent";
 
 const TicketCard = (offer: Offer) => {
@@ -34,7 +34,7 @@ const TicketCard = (offer: Offer) => {
 
     return (
         <div className="ticketCardContainer">
-            <div className="ticketCard__shown-content">
+            <div className="ticketCard__shown-content" onClick={handleChevronClick}>
                 <div className="ticketCard__logo__wrapper">
                     <div className="ticketCard ticketCard__numberOfTickets">
                         {offer.numberTickets}
@@ -49,7 +49,7 @@ const TicketCard = (offer: Offer) => {
                     {"Offre " + offer.name.toLocaleUpperCase()}
                 </div>
                 <div className="ticketCard ticketCard__price">
-                    {offer.price + " €"}
+                    {offer.price.toFixed(2) + " €"}
                 </div>
                 <button
                     className="ticketCard__chevron__wrapper"
