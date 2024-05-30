@@ -8,17 +8,22 @@
     --color-text: #212227;
 }
 
+#root {
+    max-width: 1200px;
+    min-width: 600px;
+    width: 80%;
+}
+
 .main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     min-height: 100vh;
-    background-color: var(--color-background);
-    width: 70%;
-    max-width: 900px;
-    min-width: 600px;
+    /* background-color: var(--color-background); */
+    width: 100%;
     background-color: white;
     margin: 0 auto;
+    flex-grow: 1;
 }
 
