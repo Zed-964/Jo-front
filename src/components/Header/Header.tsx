@@ -1,9 +1,7 @@
 import "./Header.css";
 import Logo from "../Logo/Logo";
-import LanguageSelector from "../LanguageSelector/LanguageSelector";
 import ProfileSelector from "../ProfileSelector/ProfileSelector";
 import BasketLogo from "../BasketLogo/BasketLogo";
-import useUserInfos from "../../hooks/useUserInfos";
 
 const Header = () => {
     const logoHeight: string = "150px";
@@ -12,9 +10,6 @@ const Header = () => {
 
     return (
         <header className="header">
-            {/* <div className="language__selector__wrapper">
-                <LanguageSelector />
-            </div> */}
             <button
                 className="header__logo__button"
                 onClick={() => (window.location.href = "/")}
