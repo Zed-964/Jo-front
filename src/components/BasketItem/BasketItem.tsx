@@ -3,6 +3,7 @@ import "./BasketItem.css";
 import { Offer } from "../../components/TicketGallery/TicketGallery";
 import useBasketContent from "../../hooks/useBasketContent";
 import BasketItemNamesInput from "../BasketItemNamesInput/BasketItemNamesInput";
+import { v4 as uuidv4 } from "uuid";
 
 interface BasketItemProps extends Offer {
     index: number;
@@ -15,7 +16,7 @@ const BasketItem = (item: BasketItemProps) => {
         let basket = JSON.parse(basketContent);
         if (basket[item.index].owners.length <= 0) {
             for (let i = 0; i < item.numberTickets; i++) {
-                basket[item.index].owners.push({ firstName: "", lastName: "" });
+                basket[item.index].owners.push({ firstname: "", lastname: "" });
             }
             setBasketContent(JSON.stringify(basket));
         }
@@ -30,9 +31,9 @@ const BasketItem = (item: BasketItemProps) => {
     return (
         <li className="basket-item">
             <div className="basket-item__firstDiv">
-                <h2>{item.name}</h2>
+                <h2>Offre {item.name}</h2>
                 <p>{item.description}</p>
-                <p>Prix: {item.price} €</p>
+                <p>Prix: {item.price.toFixed(2)} €</p>
                 <div className="basket-item__firstDiv__delete">
                     <button
                         className="basket-item__button basket-item__delete__item"
@@ -44,13 +45,13 @@ const BasketItem = (item: BasketItemProps) => {
             </div>
             {item.owners.map((owner, index) => (
                 <BasketItemNamesInput
-                    key={index}
+                    key={uuidv4()}
                     index={index}
                     itemIndex={item.index}
                     basketContent={basketContent}
                     setBasketContent={setBasketContent}
-                    firstName={owner.firstName}
-                    lastName={owner.lastName}
+                    firstname={owner.firstname}
+                    lastname={owner.lastname}
                 />
             ))}
         </li>

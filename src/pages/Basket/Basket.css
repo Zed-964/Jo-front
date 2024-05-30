@@ -3,7 +3,6 @@
     flex-direction: column;
     align-items: center;
     min-width: 100%;
-
 }
 
 .basket__ul {
@@ -13,4 +12,60 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.basket__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.basket__validate {
+    position: relative;
+
+}
+
+.tooltip {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 50%; /* Position above the button */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s, bottom 0.3s;
+    z-index: 100;
+}
+
+.basket__validate:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    bottom: 80%;
+}
+
+.basket__button {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.1s;
+    font-size: 1rem;
+    margin: 2rem 0 2rem 0;
+}
+
+.basket__button:not(.disabled):hover {
+    background-color: rgb(73, 204, 144);
+    color: #fff;
+}
+
+.basket__button.disabled {
+    /* background-color: red; */
+    /* color: #000; */
+    cursor: not-allowed;
 }

@@ -1,0 +1,142 @@
+.boughtTicket {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+    padding: 4rem;
+    border: 1px solid black;
+    border-radius: 0;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    width: 650px;
+}
+
+.boughtTicket__header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+}
+
+.boughtTicket__logo {
+    width: 200px;
+    height: auto;
+}
+
+.boughtTicket__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.boughtTicket__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+.boughtTicket__content__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    min-height: 100%;
+}
+
+.boughtTicket__content__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.boughtTicket__content__left__container {
+    padding: .5rem 0;
+}
+
+.boughtTicket__content__left__title {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.boughtTicket__content__left__value {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.boughtTicket__content__right__container {
+    padding: 1rem;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.boughtTicket__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 1rem;
+    border-top: 1px solid black;   
+}
+
+.boughtTicket__footer__h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.boughtTicket__footer__italic {
+    font-style: italic;
+}
+
+.boughtTicket__footer__h2 {
+    font-size: 1rem;
+    margin: 1rem 0;
+    font-weight: 500;
+}
+
+.boughtTicket__footer__ToS__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.boughtTicket__footer__marginTop {
+    margin-top: 1rem;
+}
+
+.boughtTicket__button {
+    width: 200px;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.1s;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.boughtTicket__button:hover {
+    background-color: #00779A;
+    color: white;
+}
+
+.boughtTicketWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    margin: 1rem 0;
+}

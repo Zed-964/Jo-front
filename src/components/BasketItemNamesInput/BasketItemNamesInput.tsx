@@ -4,15 +4,15 @@ import { useState, useEffect } from "react";
 interface BasketItemNamesInputProps {
     index: number;
     itemIndex: number;
-    firstName: string;
-    lastName: string;
+    firstname: string;
+    lastname: string;
     basketContent: string;
     setBasketContent: (basketContent: string) => void;
 }
 
 const BasketItemNamesInput = (props: BasketItemNamesInputProps) => {
-    const [firstName, setFirstName] = useState(props.firstName);
-    const [lastName, setLastName] = useState(props.lastName);
+    const [firstname, setFirstName] = useState<string>(props.firstname);
+    const [lastname, setLastName] = useState<string>(props.lastname);
 
     const handleChangeFirstName = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFirstName(e.target.value);
@@ -26,28 +26,29 @@ const BasketItemNamesInput = (props: BasketItemNamesInputProps) => {
         let basket = JSON.parse(props.basketContent);
         if (!basket[props.itemIndex].owners[props.index]) {
             basket[props.itemIndex].owners[props.index] = {
-                firstName: "",
-                lastName: "",
+                firstname: "",
+                lastname: "",
             };
         }
-        basket[props.itemIndex].owners[props.index].firstName = firstName;
-        basket[props.itemIndex].owners[props.index].lastName = lastName;
+        basket[props.itemIndex].owners[props.index].firstname = firstname;
+        basket[props.itemIndex].owners[props.index].lastname = lastname;
         props.setBasketContent(JSON.stringify(basket));
     };
 
     useEffect(() => {
-        setFirstName(props.firstName);
-        setLastName(props.lastName);
-    }, [props.firstName, props.lastName]);
+        setFirstName(props.firstname);
+        setLastName(props.lastname);
+    }, [props.firstname, props.lastname]);
 
     return (
         <div className="basketItemNamesInput">
             <input
                 type="text"
-                value={firstName}
+                value={firstname}
                 placeholder="Prénom(s)"
                 className="basket-item__input basket-firstName__input"
                 onChange={handleChangeFirstName}
+                onBlur={handleValidateNames}
                 maxLength={40}
                 onKeyDown={(e) => {
                     if (e.key === "Enter") {
@@ -64,6 +65,7 @@ const BasketItemNamesInput = (props: BasketItemNamesInputProps) => {
                                 "ArrowRight",
                                 "ArrowUp",
                                 "ArrowDown",
+                                "Tab"
                             ].includes(e.key)) ||
                         e.key === "_"
                     ) {
@@ -73,10 +75,11 @@ const BasketItemNamesInput = (props: BasketItemNamesInputProps) => {
             />
             <input
                 type="text"
-                value={lastName}
+                value={lastname}
                 placeholder="Nom"
                 className="basket-item__input basket-lastName__input"
                 onChange={handleChangeLastName}
+                onBlur={handleValidateNames}
                 maxLength={40}
                 onKeyDown={(e) => {
                     if (e.key === "Enter") {
@@ -93,6 +96,7 @@ const BasketItemNamesInput = (props: BasketItemNamesInputProps) => {
                                 "ArrowRight",
                                 "ArrowUp",
                                 "ArrowDown",
+                                "Tab"
                             ].includes(e.key)) ||
                         e.key === "_"
                     ) {
@@ -100,12 +104,6 @@ const BasketItemNamesInput = (props: BasketItemNamesInputProps) => {
                     }
                 }}
             />
-            <button
-                className="basket-item__button basket-item__validate__names"
-                onClick={handleValidateNames}
-            >
-                Valider
-            </button>
         </div>
     );
 };
