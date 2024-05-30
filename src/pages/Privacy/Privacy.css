@@ -1,0 +1,24 @@
+.privacy {
+    padding: 0 16px;
+}
+
+.privacy__h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0 0 30px;
+}
+
+.privacy__h2 {
+    font-style: italic;
+    margin: 0 0 10px;
+}
+
+.privacy_intro {
+    text-align: justify;
+}
+
+.privacy__title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 24px 0 8px 0;
+}

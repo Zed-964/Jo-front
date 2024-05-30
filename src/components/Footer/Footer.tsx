@@ -1,10 +1,14 @@
-import './Footer.css'
+import "./Footer.css";
 
 const Footer = () => {
     return (
-        <div className="footer">
-            <h1>Footer</h1>
-        </div>
+        <footer className="footer">
+            <div className="footer__container">
+                <a href="/ToS">CGU</a>
+                <a href="/privacy">Politique de confidentialité</a>
+                <a href="/contact">Contact</a>
+            </div>
+        </footer>
     );
 };
 

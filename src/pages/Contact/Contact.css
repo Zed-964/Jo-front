@@ -1,0 +1,22 @@
+.contact {
+    height: 100%;
+}
+
+.contact a {
+    color: var(--color-light);
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+}
+
+.contact a:hover {
+    color: var(--color-link-hover);
+}
+
+.contact__h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 30px 0 30px;
+    text-align: center;
+}

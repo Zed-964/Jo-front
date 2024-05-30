@@ -1,0 +1,25 @@
+.tos {
+    padding: 0 16px;
+
+}
+
+.tos__h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0 0 30px;
+}
+
+.tos__h2 {
+    font-style: italic;
+    margin: 0 0 10px;
+}
+
+.tos_intro {
+    text-align: justify;
+}
+
+.tos__title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 24px 0 8px 0;
+}
