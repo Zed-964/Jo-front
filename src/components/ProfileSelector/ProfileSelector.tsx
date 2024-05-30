@@ -1,18 +1,28 @@
 import "./ProfileSelector.css";
-import { CgProfile } from "react-icons/cg";
+// import { CgProfile } from "react-icons/cg";
 import { IconContext } from "react-icons";
+import { MdPersonOutline } from "react-icons/md";
+import useUserInfos from "../../hooks/useUserInfos";
 
-interface ProfileSelectorProps {
-    isConnected: boolean;
-}
+const ProfileSelector: React.FC = () => {
+    const { userInfos } = useUserInfos();
 
-const ProfileSelector: React.FC<ProfileSelectorProps> = ({ isConnected }) => {
+    const isConnected = userInfos?.isConnected;
+
     return (
-        <div className="profile__selector__container">
+        <div
+            className="profile__selector__container"
+            onClick={() => {
+                window.location.href = "/profile";
+            }}
+        >
             {isConnected ? (
                 <div className="profile__selector__connected">
                     <div className="profile__selector__connected__text">
-                        <span>BA</span>
+                        <span>
+                            {userInfos?.firstName.charAt(0).toUpperCase() +
+                                userInfos?.lastName.charAt(0).toUpperCase()}
+                        </span>
                     </div>
                 </div>
             ) : (
@@ -21,7 +31,7 @@ const ProfileSelector: React.FC<ProfileSelectorProps> = ({ isConnected }) => {
                         <IconContext.Provider
                             value={{ className: "profile__selector__icon" }}
                         >
-                            <CgProfile />
+                            <MdPersonOutline />
                         </IconContext.Provider>
                     </div>
                 </div>

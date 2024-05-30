@@ -2,16 +2,16 @@ import { useState, useEffect, createContext, ReactNode } from "react";
 
 export const BasketContentContext = createContext({
     basketContent: "",
-    setBasketContent: (content: string) => {},
+    setBasketContent: (basketContent: string) => {},
 });
 
 const BasketContentProvider = ({ children }: { children: ReactNode }) => {
     const [basketContent, setBasketContent] = useState(
-        localStorage.getItem("BasketContent") ?? "" // Default Content is the localStorage value, otherwise the default is an empty string
+        sessionStorage.getItem("BasketContent") ?? "" // Default Content is the sessionStorage value, otherwise the default is an empty string
     );
 
     useEffect(() => {
-        localStorage.setItem("BasketContent", basketContent);
+        sessionStorage.setItem("BasketContent", basketContent);
     }, [basketContent]);
 
     return (
