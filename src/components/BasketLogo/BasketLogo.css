@@ -1,0 +1,39 @@
+.basket-logo__icon {
+    width: 40px;
+    height: 40px;
+}
+
+.basket-logo {
+    margin: 0 10px 0 0;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    color: black;
+    position: relative;
+    height: 40px;
+}
+
+.basket-logo:hover {
+    cursor: pointer;
+}
+
+.basket-logo__counter {
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    background-color: #AAB9CF;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 5px;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+    transform: translate(50%, -50%);
+}
+
+.basket-logo__wrapper {
+    position: relative;
+    height: 40px;
+    width: auto;
+}

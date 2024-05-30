@@ -1,0 +1,25 @@
+{
+    "data": [
+        {
+            "uuid": "6599688c-6ca7-4914-bb71-3f20de271b5a",
+            "name": "solo",
+            "description": "Offre comprenant un ticket pour une seule personne",
+            "numberTickets": 1,
+            "price": 100.00
+        },
+        {
+            "uuid": "6599688c-6ca7-4914-bb71-3f20de271b5a",
+            "name": "duo",
+            "description": "Offre comprenant deux tickets pour deux personnes",
+            "numberTickets": 2,
+            "price": 175.00
+        },
+        {
+            "uuid": "6599688c-6ca7-4914-bb71-3f20de271b5a",
+            "name": "quatuor",
+            "description": "Offre comprenant quatre tickets pour quatre personnes",
+            "numberTickets": 4,
+            "price": 300.00
+        }
+    ]
+}

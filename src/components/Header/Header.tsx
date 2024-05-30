@@ -2,6 +2,7 @@ import "./Header.css";
 import Logo from "../Logo/Logo";
 import LanguageSelector from "../LanguageSelector/LanguageSelector";
 import ProfileSelector from "../ProfileSelector/ProfileSelector";
+import BasketLogo from "../BasketLogo/BasketLogo";
 import { useState } from "react";
 
 const Header = () => {
@@ -29,7 +30,8 @@ const Header = () => {
                 />
             </button>
             <div className="profile__wrapper">
-                <ProfileSelector isConnected/>
+                <BasketLogo />
+                <ProfileSelector isConnected={false} />
             </div>
         </header>
     );
