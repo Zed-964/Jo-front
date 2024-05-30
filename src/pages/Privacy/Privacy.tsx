@@ -78,7 +78,7 @@ const Privacy = () => {
             <p className="privacy__p">
                 Pour toute question ou préoccupation concernant notre politique
                 de confidentialité, veuillez nous contacter à
-                enzo.louail@gmail.com .
+                jo.tickets.adm@gmail.com .
             </p>
         </div>
     );

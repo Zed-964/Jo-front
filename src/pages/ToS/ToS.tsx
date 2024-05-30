@@ -75,7 +75,7 @@ const ToS = () => {
                 remboursement devront être soumises dans un délai spécifié après
                 l'annonce de l'annulation. Pour toute question concernant notre
                 politique ou pour demander un remboursement dans les cas
-                applicables, veuillez nous contacter directement à enzo.louail@gmail.com .
+                applicables, veuillez nous contacter directement à jo.tickets.adm@gmail.com .
             </p>
             <h2 className="tos__title">6. Utilisation du Site </h2>
             <p className="tos__p">
@@ -136,7 +136,7 @@ const ToS = () => {
             <h2 className="tos__title"> 12. Contactez-Nous </h2>
             <p className="tos__p">
                 Si vous avez des questions concernant ces Conditions
-                d'Utilisation, veuillez nous contacter à enzo.louail@gmail.com .
+                d'Utilisation, veuillez nous contacter à jo.tickets.adm@gmail.com .
             </p>
         </div>
     );
