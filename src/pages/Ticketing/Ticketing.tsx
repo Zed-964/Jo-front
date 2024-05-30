@@ -1,9 +1,10 @@
 import './Ticketing.css'
+import TicketGallery from '../../components/TicketGallery/TicketGallery'
 
 const Ticketing = () => {
     return (
         <div className="ticketing">
-            <h1>Ticketing</h1>
+            <TicketGallery />
         </div>
     );
 };

@@ -2,7 +2,7 @@
 
 :root {
     --color-light: #aab9cf;
-    /* --color-link: #BDD4E7; */
+    --color-link: #BDD4E7;
     --color-link-hover: #8693ab;
     --color-background: #f7f7f7;
     --color-text: #212227;
@@ -11,9 +11,9 @@
 .main {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--color-background);
     width: 70%;
     max-width: 900px;

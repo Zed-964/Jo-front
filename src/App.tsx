@@ -5,19 +5,20 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import CurrentLanguageProvider from "./providers/CurrentLanguageProvider";
 import PageContentProvider from "./providers/PageContentProvider";
+import BasketContentProvider from "./providers/BasketContentProvider";
 
 function App() {
-    console.log("hello world");
-
     return (
         <div className="main">
             <CurrentLanguageProvider>
                 <PageContentProvider>
-                    <Router>
-                        <Header />
-                        <RoutesTree />
-                        <Footer />
-                    </Router>
+                    <BasketContentProvider>
+                        <Router>
+                            <Header />
+                            <RoutesTree />
+                            <Footer />
+                        </Router>
+                    </BasketContentProvider>
                 </PageContentProvider>
             </CurrentLanguageProvider>
         </div>
