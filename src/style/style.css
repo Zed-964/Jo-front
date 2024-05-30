@@ -1,0 +1,30 @@
+/* Variables */
+
+:root {
+    --color-light: #aab9cf;
+    /* --color-link: #BDD4E7; */
+    --color-link-hover: #8693ab;
+    --color-background: #f7f7f7;
+    --color-text: #212227;
+}
+
+/* Global styles */
+
+html {
+    background-color: var(--color-background); /* Global background color */
+    color: var(--color-text); /* Global text color */
+
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+}
+
+a {
+    font-weight: 500;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-link-hover);
+}
