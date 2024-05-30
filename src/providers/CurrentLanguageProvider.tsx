@@ -6,16 +6,15 @@ export const CurrentLanguageContext = createContext({
 });
 
 const CurrentLanguageProvider = ({ children }: { children: ReactNode }) => {
-    const [currentLanguage, setCurrentLanguage] = useState("");
+    const [currentLanguage, setCurrentLanguage] = useState(
+        localStorage.getItem("currentLanguage") || "en"
+    );
     const locale = navigator.language;
 
     useEffect(() => {
-        if (locale.startsWith("fr")) {
-            setCurrentLanguage("fr");
-        } else {
-            setCurrentLanguage("en");
-        }
-    }, [locale]);
+        localStorage.setItem("currentLanguage", currentLanguage);
+    }, [currentLanguage]);
+
 
     return (
         <CurrentLanguageContext.Provider
@@ -24,6 +23,6 @@ const CurrentLanguageProvider = ({ children }: { children: ReactNode }) => {
             {children}
         </CurrentLanguageContext.Provider>
     );
-}; 
+};
 
 export default CurrentLanguageProvider;
