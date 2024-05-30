@@ -39,6 +39,39 @@ This application serves as the front page for the Olympic 2024 ticketry system. 
 
 2. Open your browser and navigate to [http://localhost:5173](http://localhost:5173).
 
+## Graph for the whole project
+
+```mermaid
+graph TD;
+    subgraph Front
+        Frontend(Frontend);
+        style Frontend stroke-dasharray: 5, 5;
+    end
+
+    Frontend--> Nginx_Proxy(Nginx Proxy);
+
+    subgraph Keycloak
+        Keycloak_Node[Keycloak] <--> Keycloak_DB[(Keycloak DB)];
+        style Keycloak_Node stroke-dasharray: 5, 5;
+    end
+
+    subgraph Backend
+        Nginx_Proxy --> Back_Node1[Backend];
+        style Back_Node1 stroke-dasharray: 5, 5;
+        Nginx_Proxy --> Back_Node2[Backend];
+        style Back_Node2 stroke-dasharray: 5, 5;
+        Back_Node1 --> Redis_Node1[Redis];
+        style Redis_Node1 stroke-dasharray: 5, 5;
+        Back_Node1 <--> Common_DB[(Base De Données)];
+        Back_Node2 --> Redis_Node2[Redis];
+        style Redis_Node2 stroke-dasharray: 5, 5;
+        Back_Node2 <--> Common_DB;
+    end
+
+    Nginx_Proxy --> Keycloak_Node;
+
+```
+
 ## Contributing
 
 Contributions are closed for now.
