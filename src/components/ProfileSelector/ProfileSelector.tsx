@@ -1,7 +1,7 @@
 import './ProfileSelector.css'
 
 interface ProfileSelectorProps {
-    isConnected: Boolean;
+    isConnected: boolean;
 }
 
 
